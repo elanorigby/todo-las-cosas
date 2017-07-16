@@ -10,7 +10,7 @@ options:
 
 subcommands:
 	 done (list of items marked done)
-  	 las-cosas (all items, ip and done, [with dates])
+  	 las_cosas (all items, ip and done, [with dates])
 
 arguments: "item text"
 
@@ -18,7 +18,7 @@ $ todo [--done][-d] [--remove][-r] [--amend] ["item text"]
 $ todo "item text" - adds to list
 $ todo - shows list
 $ todo done - shows items in done list
-$ todo las-cosas - shows all items now and ever, with dates (eventually)
+$ todo las_cosas - shows all items now and ever, with dates
 
 example
 ------
@@ -44,11 +44,29 @@ $ todo done
 - done good
 - job, you.
 
+# todo las_cosas
 
-metadata:
-	datetime - action
-	04/08/17 14:56 - added todo
-	06/08/17 12:23 - moved to done
+ Todo las Cosas
+-----------------
+ TODO
+******
+- tab completion for del
+    (created 04/08/17 14:56)
 
+ DONE
+******
+- all the stuff
+    (created 04/08/17 14:56)
+    (marked done 06/08/17 12:23)
+- you've got
+    (created 04/08/17 14:56)
+    (marked done 06/08/17 12:23)
+- done good
+    (created 04/08/17 14:56)
+    (marked done 06/08/17 12:23)
+- job, you.
+    (created 04/08/17 14:56)
+    (marked done 06/08/17 12:23)
+s
  
 	
