@@ -1,48 +1,77 @@
 -------------TODO-LAS-COSAS--------------
 
+watch vids: https://www.youtube.com/watch?v=kNke39OZ2k0
+
 command: todo
 options:
-	--remove, -r (eviscerate - needs tab completion) (item required)
-	--done, -d (move from do to done - needs tab completetion) (item required)
-	--amend (if no arg, last added item)
-	--resurrect (reverse done, if no arg last item done'd)
-	(if any of these opts are specfied tab completion allume)
+    --done, -d
+    --remove, -r (deletes item, confirm first)
+	--amend (last added item)
+	--resurrect (last item done'd)
 
 subcommands:
-	 done (list of items marked done)
-  	 las_cosas (all items, ip and done, [with dates])
+    done (numbered list of done items)
+  	las_cosas (all items, ip and done, [with dates])
 
 arguments: "item text"
 
-$ todo [--done][-d] [--remove][-r] [--amend] ["item text"]
-$ todo "item text" - adds to list
-$ todo - shows list
-$ todo done - shows items in done list
+$ todo [--done][-d] [--remove][-r] <item id>
+$ todo "item text" - adds to ip list
+$ todo - shows numbered ip list
+$ todo done - shows items in numbered done list
+$ todo -r <int> - confirm: delete "chosen item text" - deletes item
+$ todo -d <int> - "item text" marked as done - moves item to done list
 $ todo las_cosas - shows all items now and ever, with dates
 
 example
-------
+----------------------
 $ todo "tab completion for del"
+$ todo "seek the grail"
 $ todo
 
- TODO
-******
-- tab completion for del
+TODO
+| 1 - tab completion for del
+| 2 - seek the grail
 
-$ todo -r "tab completion for del"
+$ todo -r 1
+Are you sure you want to remove "tab completion for del"? [Y]/n
+'->
+"tab completion for del" has been removed
+$ todo
 
- TODO
-******
-[nothing nada rien semmi tipota]
+TODO
+| 1 - seek the grail
+
+$ todo -d 1
+$ todo
+
+TODO
+| nothing nada rien semmi tipota
 
 $ todo done
 
- DONE  
-******
-- all the stuff
-- you've got
-- done good
-- job, you.
+DONE
+| 1 - seek the grail
+
+# can also mark multiple items at once (with the same mark)
+
+TODO
+| 1 - tab completion for del
+| 2 - seek the grail
+
+$ todo -d 1 2
+"tab completion for del" and "seek the grail" marked done
+
+$ todo
+
+TODO
+| nothing nada rien semmi tipota
+
+$ todo done
+
+DONE
+| 2 - seek the grail
+| 1 - tab completion for del
 
 # todo las_cosas
 
@@ -67,6 +96,10 @@ $ todo done
 - job, you.
     (created 04/08/17 14:56)
     (marked done 06/08/17 12:23)
-s
- 
-	
+
+
+TODO list - add new items to bottom (option?)
+DONE list - add new items to top
+
+
+
