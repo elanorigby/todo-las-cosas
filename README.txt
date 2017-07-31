@@ -34,8 +34,7 @@ TODO
 | 2 - seek the grail
 
 $ todo -r 1
-Are you sure you want to remove "ride to camelot"? [Y]/n
-'->
+Are you sure you want to remove "ride to camelot"? [Y]/n y
 "ride to camelot" has been removed
 
 $ todo
@@ -47,7 +46,7 @@ $ todo -d 1
 $ todo
 
 TODO
-| nothing nada rien semmi tipota
+| nada
 
 $ todo done
 
@@ -57,11 +56,11 @@ DONE
 # can also mark multiple items at once (with the same mark)
 
 TODO
-| 1 - tab completion for del
+| 1 - ride to camelot
 | 2 - seek the grail
 
 $ todo -d 1 2
-"tab completion for del" and "seek the grail" marked done
+"ride to camelot" and "seek the grail" marked done
 
 $ todo
 
@@ -72,7 +71,7 @@ $ todo done
 
 DONE
 | 2 - seek the grail
-| 1 - tab completion for del
+| 1 - ride to camelot
 
 # todo las_cosas
 
