@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="todo-las-cosas",
-    version='0.1',
+    version='0.2',
     py_modules=['todo'],
     install_requires=[
         'Click',
